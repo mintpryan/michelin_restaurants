@@ -17,3 +17,4 @@ The [Tableau dashboard](https://public.tableau.com/app/profile/iana.markova/viz/
 Interactive Map: Displays the distribution of Michelin-starred restaurants by country and city.
 
 Pie Chart: Shows the distribution of cuisine types.
+![MichelinRestaurantDashboard](https://github.com/user-attachments/assets/e0a00a3f-74f6-4fbd-a2f0-4a02b7c24142)
