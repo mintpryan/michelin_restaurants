@@ -4,7 +4,7 @@ Technology used: python, beautiful soup
 
 ## Data Source
 
-The data was scraped from the Michelin Guide website. Fields include:
+The data was scraped from the [Michelin Guide website](https://guide.michelin.com/en/restaurants). Fields include:
 - Restaurant name
 - Country
 - City
@@ -12,7 +12,7 @@ The data was scraped from the Michelin Guide website. Fields include:
 
 ## Visualization
 
-The Tableau dashboard(https://public.tableau.com/app/profile/iana.markova/viz/MichelinRestaurantDashboard/Dashboard2) includes:
+The [Tableau dashboard](dashboard,https://public.tableau.com/app/profile/iana.markova/viz/MichelinRestaurantDashboard/Dashboard2) includes:
 
 Interactive Map: Displays the distribution of Michelin-starred restaurants by country and city.
 
