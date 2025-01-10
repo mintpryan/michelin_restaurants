@@ -12,7 +12,7 @@ The data was scraped from the [Michelin Guide website](https://guide.michelin.co
 
 ## Visualization
 
-The [Tableau dashboard](dashboard,https://public.tableau.com/app/profile/iana.markova/viz/MichelinRestaurantDashboard/Dashboard2) includes:
+The [Tableau dashboard](https://public.tableau.com/app/profile/iana.markova/viz/MichelinRestaurantDashboard/Dashboard2) includes:
 
 Interactive Map: Displays the distribution of Michelin-starred restaurants by country and city.
 
