@@ -21,13 +21,13 @@ class Restaurant:
     name: str
     country: str = "Undefined"
     city: str = "Undefined"
-    cousine: str = "Undefined"
+    cuisine: str = "Undefined"
     
     def __str__(self) -> str:
-        return f"Restaurant: {self.name}, Cuisine: {self.cousine}, Location: {self.city}, {self.country}"
+        return f"Restaurant: {self.name}, cuisine: {self.cuisine}, Location: {self.city}, {self.country}"
 
     def __repr__(self) -> str:
-        return f"Restaurant(name={self.name!r}, country={self.country!r}, city={self.city!r}, cousine={self.cousine!r})"
+        return f"Restaurant(name={self.name!r}, country={self.country!r}, city={self.city!r}, cuisine={self.cuisine!r})"
 
 
 all_restaraunts = []
@@ -53,16 +53,16 @@ def collect(item: PageElement) -> Restaurant:
     if len(meta_data) >= 1:
         address_array = meta_data[0].string.split(',')
         if len(address_array) == 2:
-            country, city = address_array
+            city, country = address_array
             restaraunt.country = country.strip()
             restaraunt.city = city.strip()
         elif len(address_array) == 1:
             restaraunt.country =address_array[0].strip()
             restaraunt.city = address_array[0].strip()
     if len(meta_data) == 2:
-        cousine_element = meta_data[1].string.split('·')
-        if len(cousine_element) == 2:
-            restaraunt.cousine = cousine_element[1].strip()
+        cuisine_element = meta_data[1].string.split('·')
+        if len(cuisine_element) == 2:
+            restaraunt.cuisine = cuisine_element[1].strip()
 
     return restaraunt
 
@@ -97,7 +97,7 @@ async def scrape():
 
 
 def save_to_csv(filename, restaurants):
-    fieldnames = ["name", "country", "city", "cousine"]
+    fieldnames = ["name", "country", "city", "cuisine"]
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
@@ -106,8 +106,7 @@ def save_to_csv(filename, restaurants):
                 "name": restaurant.name,
                 "country": restaurant.country,
                 "city": restaurant.city,
-                "cousine": restaurant.cousine,
+                "cuisine": restaurant.cuisine,
             })
 asyncio.run(scrape())
-print(all_restaraunts)
 save_to_csv('michelin_restaurants_dataset.csv',all_restaraunts)
